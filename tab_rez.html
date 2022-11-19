@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Таблица очков</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        document.querySelector("#onclick").onclick = function() {
+          let a = sessionStorage.getItem('a_saved') || 0;
+            a = ++a;
+              sessionStorage.setItem('a_saved', a);
+                document.getElementById('p_1_1').innerHTML = a;
+        }
+        document.querySelector("#onclick3").onclick = function() {
+          let a = sessionStorage.getItem('a_saved') || 0;
+            a = --a;
+              sessionStorage.setItem('a_saved', a);
+                document.getElementById('p_1_1').innerHTML = a;
+        }
+        document.querySelector("#onclick1").onclick = function() {
+          let o = sessionStorage.getItem('o_saved') || 0;
+            o = ++o;
+              sessionStorage.setItem('o_saved', o);
+                document.getElementById('p_2_2').innerHTML = o;
+      }
+      document.querySelector("#onclick4").onclick = function() {
+        let o = sessionStorage.getItem('o_saved') || 0;
+          o = --o;
+            sessionStorage.setItem('o_saved', o);
+              document.getElementById('p_2_2').innerHTML = o;
+      }
+      document.querySelector("#onclick2").onclick = function() {
+        let s = sessionStorage.getItem('s_saved') || 0;
+          s = ++s;
+            sessionStorage.setItem('s_saved', s);
+              document.getElementById('p_3_3').innerHTML = s;
+            }
+            document.querySelector("#onclick5").onclick = function() {
+              let s = sessionStorage.getItem('s_saved') || 0;
+                s = --s;
+                  sessionStorage.setItem('s_saved', s);
+                    document.getElementById('p_3_3').innerHTML = s;
+            }
+          }
+    </script>
+    <link rel="stylesheet" href="css_tabl_rez.css">
+    <table class="table_center">
+    <tr>
+      <td><p>Первая команда</p></td>
+      <td></td>
+      <td><p>Вторая команда</p></td>
+      <td><p>Третья команда</p></td>
+    </tr>
+    <tr>
+      <td><p id="p_1_1"></p></td>
+      <td></td>
+      <td><p id="p_2_2"></p></td>
+      <td><p id="p_3_3"></p></td>
+    </tr>
+    <tr>
+      <td><button id="onclick">Добавить балл</button></td>
+      <td></td>
+      <td><button id="onclick1">Добавить балл</button></td>
+      <td><button id="onclick2">Добавить балл</button></td>
+    </tr>
+    <tr>
+      <td><button id="onclick3">Отнять балл</button></td>
+      <td></td>
+      <td><button id="onclick4">Отнять балл</button></td>
+      <td><button id="onclick5">Отнять балл</button></td>
+    </tr>
+    </table>
+    <h1 class="tb"><a href="tabl.html"</a>Главная таблица</h1>
+  </body>
+</html>

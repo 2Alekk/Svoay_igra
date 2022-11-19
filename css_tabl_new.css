@@ -1,0 +1,77 @@
+td {
+    padding: 0 50px;
+    position: relative;
+    border: 3px solid white;
+}
+.question-cell {
+    cursor: pointer;
+}
+.main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.clear {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    color: gray;
+}
+.hider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: lightgray;
+    display: none;
+}
+
+.hider.active {
+    display: block;
+}
+body{
+  background-image: url(fon.png);
+  background-size: 100%;
+  padding-top: 2.5%;
+}
+p{
+  color:white;
+  font-size: 28px;
+  margin: 30px;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  margin: 22px;
+  text-align: center;
+}
+.gl{
+  text-align: center;
+}
+.td_gl{
+  border: 0px;
+}
+.tb{
+  position: absolute;
+  top: 70%;
+  width: 35%;
+  text-align:center;
+  left: 45%;
+  color: white;
+}
+.gl_h1{
+  position: absolute;
+  top: 70%;
+  width: 30%;
+  text-align:center;
+  left: 25%;
+  color: white;
+}

@@ -1,0 +1,33 @@
+body{
+  background-image: url(fon.png);
+  background-size: 100%;
+}
+p{
+  font-size: 40px;
+  color: white;
+}
+.table_center {
+  position: absolute;
+  top: 30%;
+  width: 55%;
+  text-align:center;
+  left: 25%;
+}
+.tb{
+  position: absolute;
+  top: 80%;
+  width:26%;
+  text-align:center;
+  left: 40%;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+button{
+  border: 0;
+  color: white;
+  font-size: 28px;
+  background-color: rgba(255, 0, 0, 0);
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Своя игра</title>
+  </head>
+<body>
+  <link rel="stylesheet" href="css_tabl_new.css">
+    <div class="main">
+        <table>
+            <tr>
+                <td class="topic-cell"><p>Единицы измерения</p></td>
+                <td><a href="ei_100.html" class="question-cell">100</td>
+                <td><a href="ei_200.html" class="question-cell">200</td>
+                <td><a href="ei_300.html" class="question-cell">300</td>
+                <td><a href="ei_400.html" class="question-cell">400</td>
+                <td><a href="ei_500.html" class="question-cell">500</td>
+            </tr>
+            <tr>
+                <td><p>Части тела</p></td>
+                <td><a href="ht_100.html" class="question-cell">100</td>
+                <td><a href="ht_200.html" class="question-cell">200</td>
+                <td><a href="ht_300.html" class="question-cell">300</td>
+                <td><a href="ht_400.html" class="question-cell">400</td>
+                <td><a href="ht_500.html" class="question-cell">500</td>
+            </tr>
+            <tr>
+                <td><p>Одежда</p></td>
+                <td><a href="o_100.html" class="question-cell">100</td>
+                <td><a href="o_200.html" class="question-cell">200</td>
+                <td><a href="o_300.html" class="question-cell">300</td>
+                <td><a href="o_400.html" class="question-cell">400</td>
+                <td><a href="o_500.html" class="question-cell">500</td>
+            </tr>
+            <tr>
+                <td><p>Род занятий<p/></td>
+                <td><a href="rz_100.html" class="question-cell">100</td>
+                <td><a href="rz_200.html" class="question-cell">200</td>
+                <td><a href="rz_300.html" class="question-cell">300</td>
+                <td><a href="rz_400.html" class="question-cell">400</td>
+                <td><a href="rz_500.html" class="question-cell">500</td>
+            </tr>
+            <tr>
+                <td><p>Домашний быт</p></td>
+                <td><a href="db_100.html" class="question-cell">100</td>
+                <td><a href="db_200.html" class="question-cell">200</td>
+                <td><a href="db_300.html" class="question-cell">300</td>
+                <td><a href="db_400.html" class="question-cell">400</td>
+                <td><a href="db_500.html" class="question-cell">500</td>
+            </tr>
+        </table>
+        <h1 class="gl_h1"><a href="index.html">Главное меню</a></h1>
+        <h1 class="tb"><a href="tab_rez.html">Таблица очков</a></h1>
+    </div>
+</body>
+
+<script>
+    function assignInitialIDs(element, index) {
+        element.id = "question_cell_" + index;
+
+        let hiderSpan = document.createElement("span")
+        hiderSpan.classList = ["hider"]
+        element.append(hiderSpan)
+        element.addEventListener("click", hideCellValue)
+    }
+
+    function hideInitialCells() {
+        cellsToHide.forEach(function(elementID) {
+            const tableCell = document.getElementById(elementID);
+            const hider = tableCell.getElementsByClassName("hider")[0]
+            hider.classList.add("active")
+        })
+    }
+
+    function hideCellValue(event) {
+        if (event.target.classList.contains("hider")) {
+            return
+        }
+
+        let hider = event.target.getElementsByClassName('hider')[0]
+        hider.classList.add("active")
+
+        cellsToHide.push(event.target.id)
+        writeToStorageVar(cellsToHide)
+    }
+
+    function getOrCreateStorageVar() {
+
+        let cellsToHide = sessionStorage.getItem("cellsToHide")
+
+        if (cellsToHide === null) {
+            cellsToHide = []
+        } else {
+            cellsToHide = cellsToHide.split(";")
+        }
+
+        return cellsToHide
+    }
+
+    function writeToStorageVar(valueToWrite) {
+        let uniqValues = [...new Set(valueToWrite)];
+        sessionStorage.setItem("cellsToHide", uniqValues.join(";"))
+    }
+
+    let cellsToHide = getOrCreateStorageVar()
+
+    const question_cells = document.querySelectorAll(".question-cell");
+    question_cells.forEach(assignInitialIDs);
+
+    hideInitialCells()
+</script>
+</html>

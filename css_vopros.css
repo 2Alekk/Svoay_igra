@@ -1,0 +1,35 @@
+body{
+  background-image: url(fon.png);
+  background-size: 100%;
+}
+p{
+  font-size: 40px;
+  color: white;
+}
+.table_center {
+  position: absolute;
+  top: 40%;
+  width: 55%;
+  text-align:center;
+  left: 25%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.tb{
+  position: absolute;
+  top: 65%;
+  width: 35%;
+  text-align:center;
+  left: 50%;
+  color: white;
+}
+.gl_h1{
+  position: absolute;
+  top: 65%;
+  width: 30%;
+  text-align:center;
+  left: 25%;
+  color: white;
+}
