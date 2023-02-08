@@ -8,7 +8,7 @@ p{
 }
 .table_center {
   position: absolute;
-  top: 40%;
+  top: 30%;
   width: 55%;
   text-align:center;
   left: 25%;
@@ -19,7 +19,7 @@ a{
 }
 .tb{
   position: absolute;
-  top: 65%;
+  top: 70%;
   width: 35%;
   text-align:center;
   left: 50%;
@@ -27,7 +27,7 @@ a{
 }
 .gl_h1{
   position: absolute;
-  top: 65%;
+  top: 70%;
   width: 30%;
   text-align:center;
   left: 25%;
