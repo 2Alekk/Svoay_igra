@@ -9,7 +9,7 @@ p{
 h3{
   font-size: 30px;
   color: white;
-  padding: 0px;
+  font-weight: normal;
 }
 .table_center {
   position: absolute;
